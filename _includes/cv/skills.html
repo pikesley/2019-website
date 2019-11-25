@@ -1,0 +1,31 @@
+<section id='skills'>
+  <h1>
+    Stuff I’m good at
+    <span>(in no particular order)</span>
+  </h1>
+  <ul id='skill-list' class="list-inline text-center">
+    {% for skill in site.data.cv.skills %}
+      {% assign bits = skill | split: '|' %}
+      <li class='list-inline-item'>
+      {% if bits[1] %}
+        <a href='{{ bits[1]}}'>
+      {% endif %}
+        {{ bits[0] }}
+      {% if bits[1] %}
+        </a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script>
+// via http://jsfiddle.net/C6LPY/2/
+$(function() {
+  var parent = $("#skill-list");
+  var divs = parent.children();
+  while (divs.length) {
+    parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+  }
+})
+</script>

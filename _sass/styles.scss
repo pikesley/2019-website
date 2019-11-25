@@ -1,0 +1,33 @@
+// Import Core Clean Blog SCSS
+@import "../assets/vendor/startbootstrap-clean-blog/scss/clean-blog.scss";
+
+body {
+    font-family: NTR;
+}
+
+h1, h2, h3, h4, .nav-item, .navbar-brand {
+    font-family: NTR;
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
+    text-transform: lowercase;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.overlay {
+    background-image: url(/assets/images/beach-huts.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: none;
+}
+
+dt {
+    font-weight: 700;
+}

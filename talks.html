@@ -1,0 +1,24 @@
+---
+title: Speaking in public
+layout: page
+---
+
+<ul>
+{% for talk in site.data.talks %}
+  {% capture id %}{{ talk.title }} {{ talk.event}}{% endcapture %}
+  {% capture id %}{{ id | downcase | replace: ' ', '-' }}{% endcapture %}
+  <li id='{{ id }}'>
+    <a class='internal' href='#{{ id }}'>
+      <h2>{{ talk.title }} <span class='subhead'>(at {{ talk.event }})</span></h2>
+    </a>
+    <div class='thumbnail '>
+      <div class='embed-responsive embed-responsive-16by9'>
+        <iframe class='embed-responsive-item'
+                src='https://www.youtube.com/embed/{{ talk.id }}{% if talk.start %}?start={{ talk.start }}{% endif %}'
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </li>
+{% endfor %}
+</ul>

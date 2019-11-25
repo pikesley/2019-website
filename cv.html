@@ -1,0 +1,18 @@
+---
+title: My CV
+sections:
+  - skills
+  - employment
+  - interests
+  - contact
+layout: page
+---
+
+
+{% include cv/intro.html %}
+
+{% for section in page.sections %}
+  {% include cv/{{ section }}.html %}
+{% endfor %}
+
+{% include cv/tail.html %}

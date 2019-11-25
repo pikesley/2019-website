@@ -1,0 +1,23 @@
+<section id='contact'>
+  <h1>Contact me</h1>
+  <ul class="list-inline text-center">
+    {% for contact in site.data.cv.contact %}
+      <li class='list-inline-item'><a href='{{ contact.link }}'>{{ contact.method }}</a></li>
+    {% endfor %}
+    <li class='list-inline-item'>
+      <a class='collapsed'
+         data-toggle='collapse'
+         href='#base64-phone-number'
+         aria-expanded='false'
+         aria-controls='base64-phone-number'>
+      Telephone
+      </a>
+    </li>
+  </ul>
+
+  <div class='collapse' id='base64-phone-number'>
+    <div class='well'>
+      <code>KzQ0Nzk3OTc3NDE4Mw==\n</code>
+    </div>
+  </div>
+</section>

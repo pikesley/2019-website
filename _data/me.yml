@@ -1,0 +1,15 @@
+- thing:       Github
+  url:         //github.com/pikesley
+  fontawesome: github
+
+- thing:       Twitter
+  url:         //twitter.com/pikesley
+  fontawesome: twitter
+
+- thing:       Instagram
+  url:         //instagram.com/pikesley
+  fontawesome: instagram
+
+- thing:       Flickr
+  url:         //flickr.com/photos/pikesley
+  fontawesome: flickr

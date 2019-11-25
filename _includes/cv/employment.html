@@ -1,0 +1,35 @@
+<section id='employment'>
+  <h1>Places I’ve worked</h1>
+  <ul id='employers'>
+    {% for employer in site.data.cv.employers %}
+      <li class='employer'>
+        <h4>{{ employer.dates.start }} - {{ employer.dates.end }}</h4>
+        <h2>
+          {{ employer.role }} at
+          {% if employer.url %}
+            <a href='{{ employer.url }}'>
+          {% endif %}
+          {{ employer.name }}{% if employer.url %}</a>{% endif %},
+          {{ employer.location }}
+        </h2>
+
+        <h3>
+          {{ employer.headline }}
+        </h3>
+
+        <!-- {% if employer.profile %}
+          {% capture param_name %}{{ employer.name | downcase | replace: ' ', '-'}}{% endcapture %} -->
+
+          <div id='{{ param_name }}-profile'>
+            {{ employer.profile | markdownify }}
+          </div>
+
+          <!-- {% include cv/more-less.html name = param_name %}
+        {% endif %} -->
+      </li>
+      {% if forloop.last == false %}
+      <hr>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

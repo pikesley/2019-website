@@ -1,0 +1,15 @@
+- title:       Projects
+  path:        /projects/
+  description: Some things I have made
+
+- title:       Talks
+  path:        /talks/
+  description: Some words I have spoken out loud
+
+- title:       Blog
+  path:        /blog/
+  description: Some words I have written down
+
+- title:       CV
+  path:        /cv/
+  description: Some things I have done for money
